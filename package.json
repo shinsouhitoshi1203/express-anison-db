@@ -1,0 +1,19 @@
+{
+	"name": "project-08",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "node --watch --inspect index.js",
+		"style": "sass --watch src/scss/:static/styles"
+	},
+	"dependencies": {
+		"dotenv": "^16.5.0",
+		"express": "^5.1.0",
+		"mongoose": "^8.15.0",
+		"mongoose-slug-updater": "^3.3.0",
+		"pug": "^3.0.3",
+		"scss": "^0.2.4",
+		"unidecode": "^1.1.0"
+	}
+}

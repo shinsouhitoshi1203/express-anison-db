@@ -1,0 +1,36 @@
+@use "sass:color";
+$header: #4c4c74;
+header {
+	background-color: $header;
+	position: sticky;
+	top: 0;
+	z-index: 1111;
+	color: white;
+}
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.title {
+	&__text {
+		font-weight: 700;
+	}
+}
+.navigation {
+	ul {
+		display: flex;
+		align-items: center;
+		a {
+			display: inline-block;
+			padding: 12px 8px;
+			transition: 0.3s;
+			&:hover {
+				background-color: color.adjust(
+					$color: $header,
+					$lightness: 10%
+				);
+			}
+		}
+	}
+}

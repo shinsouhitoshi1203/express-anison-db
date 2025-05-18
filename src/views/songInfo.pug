@@ -1,0 +1,28 @@
+extends layouts/page.pug
+block content 
+
+    .song-info 
+        .left 
+            img.thumbnail(src=song.img alt=song.title)
+            h1 #{song.title} 
+            .meta
+                .field 
+                    p 
+                        i.fa-solid.fa-microphone-lines 
+                        span #{song.artist} 
+                .field 
+                    p.listen 
+                        i.fa-brands.fa-youtube
+                        a(href=song.yt alt=song.title) Listen this song 
+                .addi 
+                    .field 
+                        p 
+                            i.fa-solid.fa-calendar
+                            span #{song.year}
+                    .field 
+                        p 
+                            i.fa-solid.fa-record-vinyl
+                            span #{song.album}  
+        .right  
+            h2 Lyrics
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam minima perspiciatis tempora numquam vero corporis, nulla, dolorum quibusdam voluptatem libero labore maiores? Deserunt necessitatibus quisquam accusamus! Eum repudiandae possimus voluptatem.

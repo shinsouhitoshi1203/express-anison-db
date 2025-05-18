@@ -1,0 +1,14 @@
+@use "sass:color";
+$blue: #182e9f;
+$red: #c40d1c;
+.message {
+	padding: 12px 20px;
+	border: 3px solid $blue;
+	background-color: color.adjust($color: $blue, $lightness: 40%);
+	margin: 10px 0;
+	border-radius: 10px;
+	&__error {
+		border: 3px solid $red;
+		background-color: color.adjust($color: $red, $lightness: 40%);
+	}
+}

@@ -1,0 +1,17 @@
+.btn {
+	display: inline-block;
+	padding: 6px 14px;
+	border-radius: 10px;
+	background: #fff100;
+	box-shadow: 0 2px 2px #686767;
+	transition: 0.3s;
+	&:hover {
+		scale: 0.95;
+	}
+	&:active {
+		scale: 0.9;
+	}
+	&__blue {
+		background-color: #e08ed1;
+	}
+}

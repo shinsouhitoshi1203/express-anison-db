@@ -1,0 +1,10 @@
+.song-list {
+	&__title {
+		margin: 20px 0;
+	}
+	&__real {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		grid-gap: 15px;
+	}
+}

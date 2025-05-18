@@ -1,0 +1,7 @@
+mixin songItem(song)
+    div.song-card 
+        h2 
+            a(href="/songs/"+song.slug) #{song.title} 
+        .song-card__meta
+            p #{song.artist} 
+            p #{song.year} 

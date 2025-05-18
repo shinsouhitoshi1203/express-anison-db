@@ -1,0 +1,19 @@
+extends layouts/page.pug
+block content 
+
+
+    include components/songItem.pug 
+
+
+    a(href="/songs/add").btn.btn__blue Add new song
+
+    .song-list 
+        .song-list__title
+            h1 Song lists 
+
+    if songs
+        .song-list__real
+            each song in songs
+                +songItem(song)
+    else 
+        p No songs available
