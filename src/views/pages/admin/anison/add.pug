@@ -1,5 +1,8 @@
-extends layouts/page.pug
+extends ../../../layouts/page.pug
 block content 
+    a(href="/admin/anison").btn.btn__blue
+        i.fa-solid.fa-chevron-left 
+        span Go back the list
     h1 Add song
     if message 
         .message.message__error #{message}

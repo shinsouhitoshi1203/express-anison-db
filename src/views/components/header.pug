@@ -1,11 +1,10 @@
 mixin header
     .header
-        p.title__text anison portal
+        a.title__text(href="/") anison portal
         nav.navigation
             ul
                 li
                     a(href="/songs") songs
                 li
-                    a(href="/") users
-                li
-                    a(href="/") manage
+                    a(href="/admin").icon 
+                        i.fa-solid.fa-user

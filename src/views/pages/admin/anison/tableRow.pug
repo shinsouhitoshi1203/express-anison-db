@@ -1,0 +1,13 @@
+mixin tableRow(anison) 
+    tr
+        td #{anison.title}
+        td #{anison.artist}
+        td #{anison.thumb}
+        td.table__controls 
+            .table__controls-inner
+                a(href="anison/"+anison._id+"/edit" title="Edit this song") 
+                    i.fa-solid.fa-pen-to-square 
+                a(href="anison/"+anison._id title="Delete this song") 
+                    i.fa-solid.fa-trash
+                a(href="/songs/"+anison.slug title="View this song") 
+                    i.fa-solid.fa-eye

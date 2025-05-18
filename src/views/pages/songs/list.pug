@@ -1,11 +1,8 @@
-extends layouts/page.pug
+extends ../../layouts/page.pug
 block content 
 
 
-    include components/songItem.pug 
-
-
-    a(href="/songs/add").btn.btn__blue Add new song
+    include card.pug 
 
     .song-list 
         .song-list__title

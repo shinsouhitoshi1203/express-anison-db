@@ -1,0 +1,29 @@
+extends ../../../layouts/page.pug
+block content 
+    include ./tableRow.pug
+    a(href="/admin").btn
+        i.fa-solid.fa-chevron-left 
+        span Go back to admin page
+    a(href="anison/add").btn.btn__blue
+        i.fa-solid.fa-plus 
+        span Add new song
+    h1 Anison list
+
+    if (!data)
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae magni, ad et possimus ut voluptas perspiciatis dolor dolorum aspernatur dignissimos tempora maxime quo totam aliquid dicta officia illo illum! Quam!
+    else 
+        .viewer
+            table.table
+                thead
+                    th title 
+                    th artist
+                    th thumbnail
+                    th.table__controls
+                tbody 
+                tbody 
+                    each anison in data
+                        +tableRow(anison)
+
+
+
+        //-     table

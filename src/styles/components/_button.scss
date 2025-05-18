@@ -1,5 +1,7 @@
 .btn {
-	display: inline-block;
+	display: inline-flex;
+	gap: 10px;
+	align-items: center;
 	padding: 6px 14px;
 	border-radius: 10px;
 	background: #fff100;

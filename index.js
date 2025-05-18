@@ -1,4 +1,5 @@
 const express = require("express");
+const override = require("method-override");
 const path = require("path");
 const router = require("./src/middlewares/routers");
 const db = require("./src/middlewares/db");
@@ -12,6 +13,7 @@ app.set("views", path.join(__dirname, "src/views"));
 app.use("/static", express.static("static"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(override("_method"));
 
 router(app);
 try {
