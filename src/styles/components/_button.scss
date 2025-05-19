@@ -4,7 +4,7 @@
 	align-items: center;
 	padding: 6px 14px;
 	border-radius: 10px;
-	background: #fff100;
+	background: #ddd;
 	box-shadow: 0 2px 2px #686767;
 	transition: 0.3s;
 	&:hover {
@@ -15,5 +15,11 @@
 	}
 	&__blue {
 		background-color: #e08ed1;
+	}
+	&__yellow {
+		background-color: #fff100;
+	}
+	&__danger {
+		background-color: #f86c6c;
 	}
 }

@@ -1,0 +1,26 @@
+.dialog {
+	&__wrapper {
+		position: fixed;
+		inset: 0;
+		background-color: #0000009f;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&--hide {
+		display: none;
+	}
+
+	background-color: white;
+	&__options {
+		display: flex;
+		gap: 12px;
+		justify-content: flex-end;
+		padding: 18px 24px;
+		background: #eee;
+	}
+
+	&__message {
+		padding: 28px 24px;
+	}
+}

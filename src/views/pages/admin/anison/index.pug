@@ -25,5 +25,10 @@ block content
                         +tableRow(anison)
 
 
-
-        //-     table
+    .form-confirm.dialog--hide.dialog__wrapper(onclick="cancelTrigger()")
+        form(action="" method="POST").dialog.delete-dialog
+            div.dialog__message 
+                p Are you sure to delete?
+            div.dialog__options
+                button.btn(type="submit").btn__danger Yes
+                button.btn.form-confirm__cancel(onclick="cancelTrigger()" type="button") No

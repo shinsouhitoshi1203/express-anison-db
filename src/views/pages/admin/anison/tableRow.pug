@@ -1,5 +1,5 @@
 mixin tableRow(anison) 
-    tr
+    tr()
         td #{anison.title}
         td #{anison.artist}
         td #{anison.thumb}
@@ -7,7 +7,7 @@ mixin tableRow(anison)
             .table__controls-inner
                 a(href="anison/"+anison._id+"/edit" title="Edit this song") 
                     i.fa-solid.fa-pen-to-square 
-                a(href="anison/"+anison._id title="Delete this song") 
+                button(href="anison/"+anison._id data-id=anison._id title="Delete this song" onclick="trigger(this)") 
                     i.fa-solid.fa-trash
                 a(href="/songs/"+anison.slug title="View this song") 
                     i.fa-solid.fa-eye

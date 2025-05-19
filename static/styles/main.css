@@ -185,6 +185,10 @@ h2 {
   font-weight: 700;
 }
 
+button {
+  cursor: pointer;
+}
+
 header {
   background-color: #4c4c74;
   position: sticky;
@@ -222,7 +226,7 @@ header {
   align-items: center;
   padding: 6px 14px;
   border-radius: 10px;
-  background: #fff100;
+  background: #ddd;
   box-shadow: 0 2px 2px #686767;
   transition: 0.3s;
 }
@@ -234,6 +238,12 @@ header {
 }
 .btn__blue {
   background-color: #e08ed1;
+}
+.btn__yellow {
+  background-color: #fff100;
+}
+.btn__danger {
+  background-color: #f86c6c;
 }
 
 .song-card {
@@ -270,11 +280,15 @@ header {
 .input > * {
   flex: 0 0 120px;
 }
-.input input {
+.input input,
+.input textarea {
   flex-grow: 1;
   border: 2px solid grey;
   border-radius: 8px;
   padding: 8px 14px;
+}
+.input textarea {
+  max-height: 200px;
 }
 
 .message {
@@ -352,6 +366,31 @@ header {
   min-height: 350px;
   max-height: 500px;
   overflow: auto;
+}
+
+.dialog {
+  background-color: white;
+}
+.dialog__wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6235294118);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dialog--hide {
+  display: none;
+}
+.dialog__options {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding: 18px 24px;
+  background: #eee;
+}
+.dialog__message {
+  padding: 28px 24px;
 }
 
 /*# sourceMappingURL=main.css.map */

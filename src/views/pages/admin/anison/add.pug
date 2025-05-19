@@ -22,6 +22,9 @@ block content
         div.input
             label(for="year") Year release
             input#year(type="number" name="year" min=1900 max=(new Date).getFullYear() step=1 value=(new Date).getFullYear())
+        div.input
+            label(for="lyric") Lyric
+            textarea#lyric(name="lyric")
 
         button.btn Submit
 

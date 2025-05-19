@@ -25,4 +25,6 @@ block content
                             span #{song.album}  
         .right  
             h2 Lyrics
-            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam minima perspiciatis tempora numquam vero corporis, nulla, dolorum quibusdam voluptatem libero labore maiores? Deserunt necessitatibus quisquam accusamus! Eum repudiandae possimus voluptatem.
+            .lyrics 
+                each p in song.lyrics 
+                    p #{p}

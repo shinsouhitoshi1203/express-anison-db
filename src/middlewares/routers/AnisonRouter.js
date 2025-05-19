@@ -8,6 +8,7 @@ AnisonRouter.post("/add", AnisonController.submitSong);
 
 AnisonRouter.get("/:id/edit", AnisonController.editSong);
 AnisonRouter.put("/:id", AnisonController.modifySong);
+AnisonRouter.delete("/:id", AnisonController.deleteSong);
 module.exports = AnisonRouter;
 
 /* 

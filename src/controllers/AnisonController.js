@@ -12,7 +12,8 @@ class AnisonController {
 			res.render(relPath, {
 				data,
 				pageTitle: "List of anisons",
-				pageCSS: "admin/anison/list"
+				pageCSS: "admin/anison/list",
+				pageJS: "/static/script/admin.js"
 			});
 		} catch (error) {
 			console.log(error);
@@ -36,7 +37,7 @@ class AnisonController {
 			return ErrorMessage;
 		}
 		const missing = [];
-		const { title, artist, year, thumb, album } = req.body ?? {};
+		const { title, artist, year, thumb, album, lyric } = req.body ?? {};
 		if (!title) missing.push("title");
 		if (!thumb) missing.push("thumbnail");
 		const M = missing.length;
@@ -52,7 +53,8 @@ class AnisonController {
 				const fields = {
 					title,
 					year,
-					thumb
+					thumb,
+					lyric
 				};
 				if (album) Object.assign(fields, { album });
 				if (artist) Object.assign(fields, { artist });
@@ -105,7 +107,7 @@ class AnisonController {
 			return ErrorMessage;
 		}
 		const missing = [];
-		const { title, artist, year, thumb, album } = req.body ?? {};
+		const { title, artist, year, thumb, album, lyric } = req.body ?? {};
 		if (!title) missing.push("title");
 		if (!thumb) missing.push("thumbnail");
 		const M = missing.length;
@@ -124,7 +126,8 @@ class AnisonController {
 				const fields = {
 					title,
 					year,
-					thumb
+					thumb,
+					lyric
 				};
 				if (album) Object.assign(fields, { album });
 				if (artist) Object.assign(fields, { artist });
@@ -138,6 +141,22 @@ class AnisonController {
 					message: error
 					//"Network connection to database has encountered an error."
 				});
+			}
+		}
+	}
+
+	// DELETE admin/anison/3rnsnvi9r2j303
+	async deleteSong(req, res, next) {
+		const { id } = req.params ?? {};
+		if (!id) {
+			res.status(404).redirect("/admin/anison");
+		} else {
+			try {
+				const Songs = model("songs", SongSchema);
+				await Songs.deleteOne({ _id: id });
+				res.status(200).redirect("/admin/anison");
+			} catch (error) {
+				next(error);
 			}
 		}
 	}

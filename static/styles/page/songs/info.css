@@ -25,4 +25,13 @@
   flex: 1 0 40%;
 }
 
+.lyrics {
+  margin-top: 30px;
+  display: grid;
+  grid-gap: 10px;
+}
+.lyrics p {
+  min-height: 4px;
+}
+
 /*# sourceMappingURL=info.css.map */

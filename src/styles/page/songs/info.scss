@@ -24,3 +24,11 @@
 		}
 	}
 }
+.lyrics {
+	margin-top: 30px;
+	display: grid;
+	grid-gap: 10px;
+	p {
+		min-height: 4px;
+	}
+}

@@ -8,10 +8,14 @@
 	& > * {
 		flex: 0 0 120px;
 	}
-	input {
+	input,
+	textarea {
 		flex-grow: 1;
 		border: 2px solid grey;
 		border-radius: 8px;
 		padding: 8px 14px;
+	}
+	textarea {
+		max-height: 200px;
 	}
 }
